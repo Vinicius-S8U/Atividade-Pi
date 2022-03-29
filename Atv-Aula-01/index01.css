@@ -1,0 +1,44 @@
+body{
+    background-image: url(https://guiadoestudante.abril.com.br/wp-content/uploads/sites/4/2021/08/GettyImages-157612293.jpg);
+    background-size: cover;
+    height: 100vh;
+    margin-left: 700px;
+    margin-top: 300px;
+    overflow: hidden;
+
+}
+
+#Div_Pai{
+   
+    height: 40vh;
+    width:  40vw;
+}
+
+#Div_filho{
+   background-color: #fff;
+   height: 20vh;
+   width: 34vw;
+   margin: 0;
+}
+#p_filho{
+   color: rgb(187, 64, 64);
+   background-color: rgb(0, 0, 0);
+   font-family: monospace;
+   font-size: 25px;
+   display: flex;
+   justify-content: center;
+
+}
+#Div_P2{
+    
+  height: 20vh;
+  width: 40vw;
+  
+
+}
+
+#Div_F2{
+  height: 5vh;
+  width: 34vw;
+  background-color: #fff;;
+}
