@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperatura e Umidade </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100&display=swap" rel="stylesheet">
+
+</head>
+<body>
+ 
+<span class="span_h1">    
+<h1>Relação de Temperatura e Umidade de São Paulo das 12:00 às 17:00 e Semestral</h1>
+</span>
+
+
+<div class = "div_grafico">
+    <canvas id="GráficoHU"></canvas>
+    <canvas id="GráficoHUS"></canvas>
+</div>
+
+
+</body>
+</html>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+    const labels = [
+      '12:00',
+      '13:00',
+      '14:00',
+      '15:00',
+      '16:00',
+      '17:00',
+    ];
+  
+    const Temperatura = {
+      labels: labels,
+      datasets: [{
+        label: 'Temperatura',
+        backgroundColor: 'rgb(255, 99, 132)',
+        borderColor: 'rgb(255, 99, 132)',
+        data: [30, 29, 28, 25, 22, 23],
+      },
+      {
+      
+        label: 'umidade',
+        backgroundColor: 'rgb(0, 0, 255)',
+        borderColor: 'rgb(0, 0, 255)',
+        data: [80, 82, 80, 85, 80, 83],
+      }
+    ]
+    };
+
+    const config1 = {
+      type: 'line',
+      data: Temperatura,
+      options: {}
+    };
+  </script>
+
+<script>
+    const Grafico1 = new Chart(
+      document.getElementById('GráficoHU'),
+      config1
+    );
+</script>
+
+
+
+
+
+
+
+
+<script>
+    const labels2 = [
+      'Janeiro',
+      'Fevereiro',
+      'Março',
+      'Abril',
+      'Maio',
+      'Junho',
+    ];
+  
+    const Temperatura2 = {
+      labels: labels2,
+      datasets: [{
+        label: 'Temperatura Média',
+        backgroundColor: 'rgb(255, 99, 132)',
+        borderColor: 'rgb(255, 99, 132)',
+        data: [22, 24, 27, 23, 20, 18],
+      },
+      {
+      
+        label: 'Umidade Média',
+        backgroundColor: 'rgb(0, 0, 255)',
+        borderColor: 'rgb(0, 0, 255)',
+        data: [90, 89, 93, 87, 88, 82],
+      }
+    ]
+    };
+
+    const config2 = {
+      type: 'bar',
+      data: Temperatura2,
+      options: {}
+    };
+  </script>
+
+<script>
+    const Grafico2 = new Chart(
+      document.getElementById('GráficoHUS'),
+      config2
+    );
+  </script>

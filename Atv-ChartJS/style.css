@@ -1,0 +1,22 @@
+body{
+  margin: 0;
+  padding: 0;  
+
+}
+
+.div_grafico{
+ height: 30%;
+ width: 50%;
+ display: flex;
+ margin-top: 3%;
+   
+}
+
+.span_h1{
+display: flex;
+justify-content: center;
+justify-self: center;
+font-family: "barlow Condensed"; 
+font-size: 30px; 
+
+}
